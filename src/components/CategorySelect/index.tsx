@@ -6,25 +6,26 @@ import { Category } from "../Category";
 
 type Props = {
   categorySelected: string;
-}
+  setCategory: (categoryId: string) => void;
+};
 
-export function CategorySelect({categorySelected}:Props) {
+export function CategorySelect({ categorySelected, setCategory }: Props) {
   return (
     <ScrollView
       horizontal
       style={styles.container}
       showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{ padding: 40 }}
+      contentContainerStyle={{ padding: 20 }}
     >
-      {categories.map(category=>(
+      {categories.map((category) => (
         <Category
-        key={category.id}
-        title={category.title}
-        icon={category.icon}
-        checked={category.id === categorySelected}
+          key={category.id}
+          title={category.title}
+          icon={category.icon}
+          checked={category.id === categorySelected}
+          onPress={() => setCategory(category.id)}
         />
       ))}
-
     </ScrollView>
   );
 }
