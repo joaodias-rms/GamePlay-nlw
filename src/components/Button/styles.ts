@@ -15,7 +15,7 @@ title:{
   color: theme.colors.heading,
   fontSize: 15,
   fontFamily: theme.fonts.text500,
-  textAlign: 'center' 
+  textAlign: 'center'
 },
 iconWrapper:{
   width: 56,
