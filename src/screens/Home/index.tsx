@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { View } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
+import { View, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { Profile } from "../../components/Profile";
@@ -44,66 +43,6 @@ export function Home() {
       date: "22/08 às 22h40",
       description: "Vamo que vamo",
     },
-    {
-      id: "3",
-      guild: {
-        id: "1",
-        name: "Maneva",
-        icon: null,
-        owner: false,
-      },
-      category: "1",
-      date: "22/08 às 22h40",
-      description: "Vamo que vamo",
-    },
-    {
-      id: "4",
-      guild: {
-        id: "1",
-        name: "Maneva",
-        icon: null,
-        owner: false,
-      },
-      category: "1",
-      date: "22/08 às 22h40",
-      description: "Vamo que vamo",
-    },
-    {
-      id: "5",
-      guild: {
-        id: "1",
-        name: "Maneva",
-        icon: null,
-        owner: false,
-      },
-      category: "1",
-      date: "22/08 às 22h40",
-      description: "Vamo que vamo",
-    },
-    {
-      id: "6",
-      guild: {
-        id: "1",
-        name: "Maneva",
-        icon: null,
-        owner: false,
-      },
-      category: "1",
-      date: "22/08 às 22h40",
-      description: "Vamo que vamo",
-    },
-    {
-      id: "7",
-      guild: {
-        id: "1",
-        name: "Maneva",
-        icon: null,
-        owner: false,
-      },
-      category: "1",
-      date: "22/08 às 22h40",
-      description: "Vamo que vamo",
-    },
   ];
 
   function handleCategorySelect(categoryId: string) {
@@ -137,6 +76,7 @@ export function Home() {
           <Appointment data={item} onPress={handleAppointmentDetails} />
         )}
         ItemSeparatorComponent={() => <ListDivider />}
+        contentContainerStyle={{paddingBottom: 69}}
         style={styles.matches}
         showsVerticalScrollIndicator={false}
       />
