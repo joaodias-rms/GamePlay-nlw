@@ -1,15 +1,25 @@
-import React from 'react'
-import { Image } from 'react-native'
-import { styles } from './styles'
+import React from "react";
+import { Image, View } from "react-native";
+import { styles } from "./styles";
 
-export function GuildIcon() {
-  const uri = 'https://img.icons8.com/color/452/discord-logo.png';
+import DiscordSVG from "../../assets/discord.svg";
+const { CDN_IMG } = process.env;
+
+type Props = {
+  guildId: string;
+  iconId: string | null;
+};
+
+export function GuildIcon({ guildId, iconId }: Props) {
+  const uri = `${CDN_IMG}/icons/${guildId}/${iconId}.png`;
 
   return (
-   <Image 
-   source = {{uri}}
-   style={styles.image}
-   resizeMode="cover"
-   />
-  )
+    <View style={styles.container}>
+      {iconId ? (
+        <Image source={{ uri }} style={styles.image} resizeMode="cover" />
+      ) : (
+        <DiscordSVG width={40} height={40} />
+      )}
+    </View>
+  );
 }

@@ -57,7 +57,7 @@ const members = [
         renderItem={({item})=> (
             <Member data={item}/>
         )}
-        ItemSeparatorComponent={()=> <ListDivider/>}
+        ItemSeparatorComponent={()=> <ListDivider isCentered/>}
         style={styles.members}
       />
 
