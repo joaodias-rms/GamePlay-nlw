@@ -27,8 +27,8 @@ export function Home() {
     categoryId === category ? setCategory("") : setCategory(categoryId);
   }
 
-  function handleAppointmentDetails(GuildSelected: AppointmentProps) {
-    navigation.navigate("AppointmentDetails", {GuildSelected});
+  function handleAppointmentDetails(guildSelected: AppointmentProps) {
+    navigation.navigate("AppointmentDetails", {guildSelected});
   }
   function handleAppointmentCreate() {
     navigation.navigate("AppointmentCreate");
