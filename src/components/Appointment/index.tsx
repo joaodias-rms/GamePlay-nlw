@@ -17,7 +17,7 @@ import { styles } from "./styles";
 export type AppointmentProps = {
   id: string;
   guild: GuildProps;
-  category: String;
+  category: string;
   date: string;
   description: string;
 };
@@ -27,7 +27,7 @@ type Props = RectButtonProps & {
 };
 
 export function Appointment({ data, ...rest }: Props) {
-  const [category] = categories.filter((item) => item.id === data.category);
+  const [category] = categories.filter(item => item.id === data.category);
   const { owner } = data.guild;
   const { primary, on, secondary50, secondary70 } = theme.colors;
 
